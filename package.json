@@ -1,0 +1,17 @@
+{
+  "name": "restful",
+  "version": "1.0.0",
+  "description": "Start course of NodeJS in Hcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DreyIMM",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.1",
+    "consign": "^0.1.6",
+    "express": "^4.17.2"
+  }
+}

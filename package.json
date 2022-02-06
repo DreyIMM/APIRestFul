@@ -12,6 +12,8 @@
     "body-parse": "^0.1.0",
     "body-parser": "^1.19.1",
     "consign": "^0.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "ndb": "^1.1.5",
+    "nedb": "^1.8.0"
   }
 }

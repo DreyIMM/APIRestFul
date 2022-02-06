@@ -2,6 +2,7 @@ const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
 //carregando o modulo
+//Body-parser trabalha como um middleware
 
 let app = express();
 

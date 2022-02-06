@@ -7,7 +7,7 @@ module.exports = app=>{
 
         res.statusCode = 200;
         res.setHeader('Content-type', 'text/html');
-        res.end('<h1>OLÁ, CASE</h1>')   
+        res.end('<h1>Ola, CASE</h1>')   
 
         
     });

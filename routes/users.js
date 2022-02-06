@@ -43,6 +43,7 @@ module.exports = app=>{
         })
     
     });   
+    
     let routeId = app.route('/users/:id')
 
     routeId.get((req,res)=>{
@@ -58,6 +59,23 @@ module.exports = app=>{
 
 
     })
-    
 
+    
+    routeId.put((req, res)=> {
+        // Filtro (_id) o que será enviado é o parans
+        //Passa os dados pelo body
+        // retornar o erro
+        db.update({ _id: req.params.id}, req.body, err=> {
+           
+            if(err){
+                app.utils.error.send(err,req,res)
+            }else{
+                // para juntar dois objetos Utilizado o Object.assing()  
+                res.status(200).json(Object.assign(req.params, req.body))
+                
+            }
+
+        });          
+        
+    });
 };

@@ -71,11 +71,32 @@ module.exports = app=>{
                 app.utils.error.send(err,req,res)
             }else{
                 // para juntar dois objetos Utilizado o Object.assing()  
-                res.status(200).json(Object.assign(req.params, req.body))
-                
+                res.status(200).json(Object.assign(req.params, req.body))                
             }
-
         });          
         
     });
+
+
+    routeId.delete((req, res)=>{
+
+        db.remove({ _id: req.params.id}, {}, err=>{
+              
+            if(err){
+                app.utils.error.send(err,req,res)
+            }else{
+                // para juntar dois objetos Utilizado o Object.assing()  
+                res.status(200).json(req.params)                
+            }
+
+        })
+
+
+    })
+
+
+
+
+
+
 };
